@@ -1,4 +1,3 @@
-
 // Your contract address
 const contractMumbai = "0xEB74f2097Dd6713B49Cc92f4cA2cB39Bc100843c";
 const contractPolygon = "0x12a57d1aCA1dc123CEcaaE2E67f0a69f6aCDde7b";
@@ -11,17 +10,19 @@ const resultado = document.getElementById("resultado");
 const carteira = document.getElementById("carteira");
 const botaoEnviar = document.getElementById("botao_enviar");
 
-
-if (typeof window.ethereum !== 'undefined' && window.ethereum.isMetaMask) {
-  window.ethereum.request({ method: 'eth_chainId' }).then(chainId => {
-    console.log('Connected to chain:', chainId);
-  }).catch(error => {
-    console.log('Failed to get chain ID:', error);
-    botaoEnviar.textContent = 'Conectar';
-  });
+if (typeof window.ethereum !== "undefined" && window.ethereum.isMetaMask) {
+  window.ethereum
+    .request({ method: "eth_chainId" })
+    .then((chainId) => {
+      console.log("Connected to chain:", chainId);
+    })
+    .catch((error) => {
+      console.log("Failed to get chain ID:", error);
+      botaoEnviar.textContent = "Conectar";
+    });
 } else {
   alert("MetaMask não está instalada. Instale a MetaMask para continuar.");
-  botaoEnviar.textContent = 'Conectar';
+  botaoEnviar.textContent = "Conectar";
 }
 
 async function enviar() {
@@ -37,12 +38,14 @@ async function enviar() {
     contractAddress = contractMumbai;
   } else if (chainId == 137) {
     contractAddress = contractPolygon;
-  }else if (chainId == 1) {
+  } else if (chainId == 1) {
     contractAddress = contractEthereum;
   }
 
   if (contractAddress == "") {
-    alert("Conecte a Mumbai Testnet, Polygon Mainnet ou Ethereum Mainnet para usar o Dapp.");
+    alert(
+      "Conecte a Mumbai Testnet, Polygon Mainnet ou Ethereum Mainnet para usar o Dapp."
+    );
     return;
   }
 
@@ -63,17 +66,21 @@ async function enviar() {
   document.getElementById("wallets").innerHTML = JSON.stringify(wallets);
   document.getElementById("values").innerHTML = JSON.stringify(values);
 
-  // Estimate gas for the transaction
-  const estimate = await multiSendContract.multisendEther(wallets, values, { value: ethers.utils.parseEther(resultado.value) }).estimateGas();
+  try {
+    // Estimate gas for the transaction
+    const estimate = await multiSendContract.estimateGas.multisendEther(wallets, values, { value: ethers.utils.parseEther(resultado.value) });
+    const gasLimit = Math.round(estimate.toNumber() * 1.2);
 
-  // Add a buffer to the estimated gas
-  const gasLimit = estimate.mul(1.2); // Add a 20% buffer
-
-  // Send the transaction with the estimated gas limit
-  const tx = await multiSendContract.multisendEther(wallets, values, { value: ethers.utils.parseEther(resultado.value), gasLimit });
-  console.log("Transaction hash:", tx.hash);
+    // Send the transaction with the estimated gas limit
+    const tx = await multiSendContract.multisendEther(wallets, values, {
+      value: ethers.utils.parseEther(resultado.value),
+      gasLimit,
+    });
+    console.log("Transaction hash:", tx.hash);
+  } catch (error) {
+    alert(error);
+  }
 }
-
 
 function calcular() {
   const value = Number(vezes.value);
