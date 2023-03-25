@@ -1,0 +1,130 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "upgradeabilityOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This is the storage necessary to perform upgradeable contracts. This means, required state variables for upgradeability purpose and eternal storage per se.",
+			"kind": "dev",
+			"methods": {
+				"implementation()": {
+					"details": "Tells the address of the current implementation",
+					"returns": {
+						"_0": "address of the current implementation"
+					}
+				},
+				"upgradeabilityOwner()": {
+					"details": "Tells the address of the owner",
+					"returns": {
+						"_0": "the address of the owner"
+					}
+				},
+				"version()": {
+					"details": "Tells the version name of the current implementation",
+					"returns": {
+						"_0": "string representing the name of the current version"
+					}
+				}
+			},
+			"title": "OwnedUpgradeabilityStorage",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"multisend2/OwnedUpgradeabilityStorage.sol": "OwnedUpgradeabilityStorage"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"multisend2/EternalStorage.sol": {
+			"keccak256": "0xfd9c982608bf1f5be6509b13cdd61f433109c40d85f12d28377006533571a68f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2c99d7600bc0c525b674cb75419147750a9ec8abdc7c353a8efd9551f6eabe5b",
+				"dweb:/ipfs/QmeNyKxaxsk5SR1KagAMW4B53rS5WYMNax9r77TEWnd3S7"
+			]
+		},
+		"multisend2/OwnedUpgradeabilityStorage.sol": {
+			"keccak256": "0x6dc3737c012fb57a830691884e3840b828fed93cc1f989cca670b46520aeb618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f7c38493d55654270b55e37fdb47f896c5c8f0ddb2eaa5ff3c4e470c95da1377",
+				"dweb:/ipfs/QmPvF7N7axr985w2qZjmotCfpJ4aFZtdfLUt8QHUDQnY3P"
+			]
+		},
+		"multisend2/UpgradeabilityOwnerStorage.sol": {
+			"keccak256": "0xfadeecd485b4a956129182f779c553c196f167635adbbd2a71ea5f4432320920",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c4848bce7b6c15ed6f9f370511571cb87226898a917138e69cfba4376efd270e",
+				"dweb:/ipfs/QmeH21g1ZNetv4PpMN1fQ1UVFk2ZswicHwJULRbqy37RQA"
+			]
+		},
+		"multisend2/UpgradeabilityStorage.sol": {
+			"keccak256": "0xa9d8c38d56fa188a7fff8f41055a16ef4fd156397864499227de59fb40b42761",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://069d36f998f0cd2652bfd4a6acc482aeaeed09c2960392e3f229622ec68e43cc",
+				"dweb:/ipfs/QmWuZ87Bza8KVSuUjdsauxHmS3HtfydTjhUMheSkbaKTVq"
+			]
+		}
+	},
+	"version": 1
+}

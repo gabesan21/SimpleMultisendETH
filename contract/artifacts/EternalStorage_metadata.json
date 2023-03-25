@@ -1,0 +1,37 @@
+{
+	"compiler": {
+		"version": "0.4.23+commit.124ca40d"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {},
+			"title": "EternalStorage"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"multisend2/EternalStorage.sol": "EternalStorage"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"multisend2/EternalStorage.sol": {
+			"keccak256": "0xfb395670de65729330124ebf575768ad93eaf9facf58cdcee34a14e6aff66d02",
+			"urls": [
+				"bzzr://a20b087fccdece2116499a6e1150572bba63548df8655680fffb4ffd39c09bb0"
+			]
+		}
+	},
+	"version": 1
+}

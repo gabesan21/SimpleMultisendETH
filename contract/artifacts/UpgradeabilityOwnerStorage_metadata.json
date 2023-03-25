@@ -1,0 +1,57 @@
+{
+	"compiler": {
+		"version": "0.4.23+commit.124ca40d"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "upgradeabilityOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"upgradeabilityOwner()": {
+					"details": "Tells the address of the owner",
+					"return": "the address of the owner"
+				}
+			},
+			"title": "UpgradeabilityOwnerStorage"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"multisend2/UpgradeabilityOwnerStorage.sol": "UpgradeabilityOwnerStorage"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"multisend2/UpgradeabilityOwnerStorage.sol": {
+			"keccak256": "0xadb2ba4c8b570af2b819d9c32b750492d1a25e9504074424c3d16c49696e0dae",
+			"urls": [
+				"bzzr://204a9f69862c071a9da12d681ce56ce659c7c80efc79c7c3d6b792cd2357b9b4"
+			]
+		}
+	},
+	"version": 1
+}

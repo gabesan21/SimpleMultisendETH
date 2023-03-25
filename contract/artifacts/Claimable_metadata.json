@@ -1,0 +1,154 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "claimOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pendingOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Extension for the Ownable contract, where the ownership needs to be claimed. This allows the new owner to accept the transfer.",
+			"events": {
+				"OwnershipTransferred(address,address)": {
+					"details": "Event to show ownership has been transferred",
+					"params": {
+						"newOwner": "representing the address of the new owner",
+						"previousOwner": "representing the address of the previous owner"
+					}
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"claimOwnership()": {
+					"details": "Allows the pendingOwner address to finalize the transfer."
+				},
+				"owner()": {
+					"details": "Tells the address of the owner",
+					"returns": {
+						"_0": "the address of the owner"
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "the address to transfer ownership to."
+					}
+				}
+			},
+			"title": "Claimable",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"multisend2/Claimable.sol": "Claimable"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"multisend2/Claimable.sol": {
+			"keccak256": "0x7b7bbd881d038b789b663513e69537a5a956ecc1417d33a175b0c1ed91bab3f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://068fe66ea7ddc73f812ebf42e3adb05ee2d228afc82a1648ab5a3660e143f692",
+				"dweb:/ipfs/QmYkfd7n46833Q6xQ27apGLTqtBkctQx2QtPBe6ygCA57u"
+			]
+		},
+		"multisend2/EternalStorage.sol": {
+			"keccak256": "0xfd9c982608bf1f5be6509b13cdd61f433109c40d85f12d28377006533571a68f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2c99d7600bc0c525b674cb75419147750a9ec8abdc7c353a8efd9551f6eabe5b",
+				"dweb:/ipfs/QmeNyKxaxsk5SR1KagAMW4B53rS5WYMNax9r77TEWnd3S7"
+			]
+		},
+		"multisend2/Ownable.sol": {
+			"keccak256": "0xc82402a737f4441ce727aa210d2118eaf7f62b6bdc1fbfe6a90cb96c21bbce55",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a42f2cf5d5c2b7b583a674a0b76a67b1d258a14fba10f635d5bd594e3b08c834",
+				"dweb:/ipfs/QmbTFZQutyDdKoRRY4nKhKyTxfBoEYjrS3Gc7sTG8pVE4m"
+			]
+		}
+	},
+	"version": 1
+}

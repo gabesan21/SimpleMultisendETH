@@ -1,0 +1,75 @@
+{
+	"compiler": {
+		"version": "0.4.23+commit.124ca40d"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"implementation()": {
+					"details": "Tells the address of the current implementation",
+					"return": "address of the current implementation"
+				},
+				"version()": {
+					"details": "Tells the version name of the current implementation",
+					"return": "string representing the name of the current version"
+				}
+			},
+			"title": "UpgradeabilityStorage"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"multisend2/UpgradeabilityStorage.sol": "UpgradeabilityStorage"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"multisend2/UpgradeabilityStorage.sol": {
+			"keccak256": "0xebc6b8883fc283eea52548f0cdf4f5338cc4963b89cbf5132c764a68ea32048c",
+			"urls": [
+				"bzzr://ab72c3500d2a5b099c5772d3caedda69e72e033ae114b23f998e7d2b94a9e433"
+			]
+		}
+	},
+	"version": 1
+}

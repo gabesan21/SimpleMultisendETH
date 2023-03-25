@@ -1,0 +1,424 @@
+{
+	"compiler": {
+		"version": "0.4.23+commit.124ca40d"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"name": "_contributors",
+						"type": "address[]"
+					},
+					{
+						"name": "_balances",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multisendToken",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "setFee",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "claimOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "claimETH",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "unsetFee",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "upgradeabilityOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_contributors",
+						"type": "address[]"
+					},
+					{
+						"name": "_balances",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multisendEther",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "arrayLimit",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "customer",
+						"type": "address"
+					}
+				],
+				"name": "txCount",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "fee",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "claimTokens",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "pendingOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_newLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "setArrayLimit",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "total",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "tokenAddress",
+						"type": "address"
+					}
+				],
+				"name": "Multisended",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"name": "ClaimedTokens",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"name": "ClaimedETH",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"claimOwnership()": {
+					"details": "Allows the pendingOwner address to finalize the transfer."
+				},
+				"implementation()": {
+					"details": "Tells the address of the current implementation",
+					"return": "address of the current implementation"
+				},
+				"owner()": {
+					"details": "Tells the address of the owner",
+					"return": "the address of the owner"
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to set the pendingOwner address.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				},
+				"upgradeabilityOwner()": {
+					"details": "Tells the address of the owner",
+					"return": "the address of the owner"
+				},
+				"version()": {
+					"details": "Tells the version name of the current implementation",
+					"return": "string representing the name of the current version"
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"multisend2/FortMultisend.sol": "FortMultisend"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"multisend2/Claimable.sol": {
+			"keccak256": "0xd9a073dd4d08967f1c03245b6616b646067b98b2e8835588812607ba8f767ee8",
+			"urls": [
+				"bzzr://6e3a47716ec150621a794be3f298a5f4f9e9b65b538e25049ba5ed70e8180ac9"
+			]
+		},
+		"multisend2/EternalStorage.sol": {
+			"keccak256": "0xfb395670de65729330124ebf575768ad93eaf9facf58cdcee34a14e6aff66d02",
+			"urls": [
+				"bzzr://a20b087fccdece2116499a6e1150572bba63548df8655680fffb4ffd39c09bb0"
+			]
+		},
+		"multisend2/FortMultisend.sol": {
+			"keccak256": "0xc3dc0a3b493a486ee34699bad6ba435f778a792e06b2f4a8312b658204b2a6ac",
+			"urls": [
+				"bzzr://1d4053daf1de720180378af7ccbe0c3c9e1bed7e7caf99b73293c8d09a8835ee"
+			]
+		},
+		"multisend2/Ownable.sol": {
+			"keccak256": "0xa9d333bba3a263c3b31088ecd27eccf1c0ed5981a0c8ed61575e23ad34878871",
+			"urls": [
+				"bzzr://d769028002f097ee306f12834fa572f761ab0fba94333625e8e3fd74eef5088e"
+			]
+		},
+		"multisend2/OwnedUpgradeabilityStorage.sol": {
+			"keccak256": "0xc5e083cdaf45d7d4aaaa525c5c2bb423e0054c558e2f1cb96cbb14850f1ddadc",
+			"urls": [
+				"bzzr://bb99dc68c9ceeab4395011d70d39e90c52e1c8a7ac8eb844590c3595d887d1b3"
+			]
+		},
+		"multisend2/SafeMath.sol": {
+			"keccak256": "0xac2f11209fb5cb8334bc3b7390bff3620e605e19d65937a9a8b3c5856ed4be02",
+			"urls": [
+				"bzzr://8cdc44736a498bf4897763504367663258ada2f625f8f0016a69f3d469ad5784"
+			]
+		},
+		"multisend2/UpgradeabilityOwnerStorage.sol": {
+			"keccak256": "0xadb2ba4c8b570af2b819d9c32b750492d1a25e9504074424c3d16c49696e0dae",
+			"urls": [
+				"bzzr://204a9f69862c071a9da12d681ce56ce659c7c80efc79c7c3d6b792cd2357b9b4"
+			]
+		},
+		"multisend2/UpgradeabilityStorage.sol": {
+			"keccak256": "0xebc6b8883fc283eea52548f0cdf4f5338cc4963b89cbf5132c764a68ea32048c",
+			"urls": [
+				"bzzr://ab72c3500d2a5b099c5772d3caedda69e72e033ae114b23f998e7d2b94a9e433"
+			]
+		}
+	},
+	"version": 1
+}
