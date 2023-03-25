@@ -3,7 +3,6 @@
 const contractMumbai = "0xEB74f2097Dd6713B49Cc92f4cA2cB39Bc100843c";
 const contractPolygon = "0x12a57d1aCA1dc123CEcaaE2E67f0a69f6aCDde7b";
 const contractEthereum = "0x9f78f4A2c5327896079E9Abb4DE978d8966f8E3B";
-const decimals = 10 ** 18;
 
 // Get references to the input elements
 const vezes = document.getElementById("vezes");
